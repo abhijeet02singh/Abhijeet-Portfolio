@@ -1,3 +1,5 @@
+import { Languages } from "lucide-react";
+
 export const skillsData = {
   frontend: {
     title: 'Frontend Development',

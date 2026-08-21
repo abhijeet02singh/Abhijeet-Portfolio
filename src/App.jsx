@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
@@ -13,6 +13,7 @@ import Credentials from './components/Credentials';
 import VisionMission from './components/VisionMission';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import InteractiveChatbot from './components/InteractiveChatbot';
 import { contactData } from './data/contact';
 
 function App() {
@@ -61,8 +62,9 @@ function App() {
   }, []);
 
   return (
-    <div className="scroll-container">
-      <Navigation scrollToSection={scrollToSection} />
+    <>
+      <div className="scroll-container">
+        <Navigation scrollToSection={scrollToSection} />
       <section id="hero" ref={sectionRefs.hero}>
         <Hero scrollToSection={scrollToSection} />
       </section>
@@ -110,7 +112,9 @@ function App() {
         copyrightText={`Abhijeet Singh ${new Date().getFullYear()}. All Rights Reserved`}
         barCount={23}
       />
+      <InteractiveChatbot />
     </div>
+    </>
   );
 }
 
